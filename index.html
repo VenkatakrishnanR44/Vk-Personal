@@ -291,7 +291,7 @@ https://www.tooplate.com/view/2120-ben-resume
                         </div>
                     </div>
 
-                    <span class="faq-info-text">Please send us a message if you have anything to say.
+                    <span class="faq-info-text">Please send me a message if you have anything to say. Send an email message to <strong>contact (at) r.venkatakrishnan2008@gmail.com</strong></span>
 
                 </div>
 
@@ -364,6 +364,35 @@ https://www.tooplate.com/view/2120-ben-resume
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
+<script>
+    // Disable right-click with an alert message
+    document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        alert("⚠ Viewing Source Code is Restricted!");
+    });
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+U with an alert message
+    document.addEventListener("keydown", (event) => {
+        if (
+            event.key === "F12" || 
+            (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) 
+        ) {
+            event.preventDefault();
+            alert("⚠ Viewing Source Code is Restricted!");
+        }
+        
+        // Special handling for Ctrl+U (tries to block & warn)
+        if (event.ctrlKey && event.key === "u") {
+            event.preventDefault();
+            alert("⚠ Viewing Source Code is Restricted!");
+            window.location.href = "about:blank"; // Redirects to a blank page
+        }
+    });
+</script>
+
+
+
+
 
 </body>
 </html>
